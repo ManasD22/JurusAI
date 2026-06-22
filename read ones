@@ -1,0 +1,63 @@
+Done. Your setup guide is ready at the project root: 
+JurisAI_Setup_Guide.pdf — 3 pages, validated as a well-formed PDF (opens in Chrome, Edge, 
+Adobe, etc.). It's not git-ignored, so it'll be included when you push to GitHub and travel with 
+the repo. 
+It covers, step by step, exactly what someone does after cloning your repo: 
+1. What you'll run (backend :8000, frontend :5173) 
+2. Prerequisites — Node 18+, Python 3.10–3.12, Git (with the "Add to PATH" reminder) 
+3. git clone the repo 
+4. Backend setup — venv → pip install -r 
+requirements.txt → makemigrations → migrate → createsuperuser → runserver (all 
+commands, Windows + macOS/Linux) 
+5. Add your Gemini key — copy .env.example .env, paste GEMINI_API_KEY, with the free
+key link 
+6. Frontend setup — npm install → npm run dev 
+7. Using the app — register/login + each of the 4 modules 
+8. Troubleshooting — Python PATH, PyMuPDF/pip, port conflicts, CORS, offline/demo 
+mode 
+9. Project structure 
+10. Notes — don't commit .env, Gemini default, "general info not legal advice" 
+One thing the guide deliberately does (and flags): since backend/.env is git-ignored for security, 
+it won't be in your pushed repo — so the guide instructs the reader to recreate it from 
+.env.example and paste the Gemini key after cloning. Your key is still saved locally in 
+backend/.env on this machine for running it here. 
+If you'd like the PDF restyled (colors/logo, your name and group number, college header to 
+match the report), or want it placed inside a docs/ folder, just say so. 
+is everything done and will it work properly?? 
+Honest answer: the frontend is verified working; the backend is complete and carefully 
+reviewed but I could not run it here (no Python on this machine, and you asked me not to 
+install anything). So I can vouch for the frontend with certainty, and I'm highly confident in the 
+backend — but I can't prove it runs until it's run once. Here's the precise picture. 
+Verified (I actually ran these) 
+• Frontend builds — npm install + npm run build succeeded (1649 modules, zero errors). 
+• Frontend serves — dev server returns HTTP 200 and compiles JSX; all 40 icons resolve. 
+• Frontend works standalone — even with no backend, it shows realistic demo data on 
+every screen. 
+• The PDF guide — structurally valid, opens in any reader. 
+Written & reviewed, but NOT run here 
+• The Django backend — never executed (no manage.py check, no migrations, no server 
+boot). I traced all imports/URLs/models statically and found no errors, but a first run is 
+the real test. 
+• Live Gemini calls — never tested against the API. 
+• End-to-end frontend↔backend — only the frontend was tested in isolation. 
+The 3 things most likely to need attention on first run 
+1. Python must be installed (3.10–3.12) before the backend can run. The PDF/README 
+cover the exact steps. 
+2. Your Gemini key format looks unusual. Real Google AI Studio keys start with AIza…; 
+yours starts with AQ.…, which looks like a different kind of token. If it's invalid, the 
+app won't crash — AI features quietly fall back to offline answers/summaries. If you 
+want live Gemini, generate a fresh key at aistudio.google.com/apikey and replace the 
+value in backend/.env. 
+3. First-run commands must be done in order: pip install -r 
+requirements.txt → makemigrations → migrate → runserver. 
+What "works properly" means here 
+• Run the 4 steps → backend boots, frontend connects, you can register/login and use all 
+four modules. The app is designed to never hard-fail: if Gemini or the network is 
+unavailable, it degrades to rule-based/offline results instead of erroring. 
+I can close the remaining gap fast if you do one of these: 
+• On a machine with Python, run python manage.py check (and migrate) and paste any 
+output — I'll fix anything it flags. 
+• Or paste the first error you hit on runserver/npm run dev, and I'll patch it. 
+So: frontend — yes, confirmed. Backend — complete and should work after the 
+documented setup, but treat the very first runserver as the acceptance test, and don't be 
+surprised if AI runs in offline mode until a valid AIza… Gemini key is in place.
