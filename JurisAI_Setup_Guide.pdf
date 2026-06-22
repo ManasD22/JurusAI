@@ -1,0 +1,163 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier-Bold >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 3546 >>
+stream
+BT /F2 19 Tf 54.00 798.00 Td (JurisAI - Setup & Run Guide) Tj ET
+BT /F1 10 Tf 54.00 771.00 Td (Smart Legal Advisor & Document Assistant) Tj ET
+BT /F1 10 Tf 54.00 757.00 Td (A React \(frontend\) + Django REST \(backend\) web app with four AI modules: Legal) Tj ET
+BT /F1 10 Tf 54.00 743.00 Td (Advisor chatbot, Document Summarization, Multilingual Document Generation, and) Tj ET
+BT /F1 10 Tf 54.00 729.00 Td (Agreement Clause Verification. AI is powered by Google Gemini \(free tier\), with) Tj ET
+BT /F1 10 Tf 54.00 715.00 Td (built-in offline fallbacks.) Tj ET
+0.55 0.55 0.6 RG 0.8 w 54 706.00 m 541.28 706.00 l S
+BT /F2 13 Tf 54.00 678.00 Td (1. What you will run) Tj ET
+BT /F1 10 Tf 64.00 658.00 Td (- Backend API \(Django\) -> http://localhost:8000) Tj ET
+BT /F1 10 Tf 64.00 644.00 Td (- Frontend app \(React\) -> http://localhost:5173) Tj ET
+BT /F1 10 Tf 64.00 630.00 Td (- You open the frontend in a browser; it talks to the backend API.) Tj ET
+BT /F2 13 Tf 54.00 600.00 Td (2. Prerequisites \(install these first\)) Tj ET
+BT /F1 10 Tf 64.00 580.00 Td (- Node.js 18 or newer \(check with: node --version\)) Tj ET
+BT /F1 10 Tf 64.00 566.00 Td (- Python 3.10 - 3.12 \(check with: python --version\)) Tj ET
+BT /F1 10 Tf 64.00 552.00 Td (- Git \(check with: git --version\)) Tj ET
+BT /F1 10 Tf 54.00 538.00 Td (Downloads: Node -> https://nodejs.org | Python -> https://python.org/downloads) Tj ET
+BT /F1 10 Tf 54.00 524.00 Td (IMPORTANT: on the Python installer, tick 'Add python.exe to PATH'.) Tj ET
+BT /F2 13 Tf 54.00 494.00 Td (3. Get the code from GitHub) Tj ET
+BT /F1 9 Tf 66.00 474.00 Td (git clone <YOUR-REPO-URL> jurisai) Tj ET
+BT /F1 9 Tf 66.00 461.50 Td (cd jurisai) Tj ET
+BT /F1 10 Tf 54.00 449.00 Td (Replace <YOUR-REPO-URL> with your repository URL. After cloning you will have two) Tj ET
+BT /F1 10 Tf 54.00 435.00 Td (folders: backend/ and frontend/.) Tj ET
+BT /F2 13 Tf 54.00 405.00 Td (4. Backend setup \(Django API\)) Tj ET
+BT /F1 10 Tf 54.00 385.00 Td (Open a terminal in the project folder and run these one block at a time:) Tj ET
+BT /F1 9 Tf 66.00 371.00 Td (cd backend) Tj ET
+BT /F1 9 Tf 66.00 358.50 Td () Tj ET
+BT /F1 9 Tf 66.00 346.00 Td (# create and activate a virtual environment) Tj ET
+BT /F1 9 Tf 66.00 333.50 Td (python -m venv venv) Tj ET
+BT /F1 9 Tf 66.00 321.00 Td (venv\\Scripts\\activate # Windows \(PowerShell / CMD\)) Tj ET
+BT /F1 9 Tf 66.00 308.50 Td (# source venv/bin/activate # macOS / Linux) Tj ET
+BT /F1 9 Tf 66.00 296.00 Td () Tj ET
+BT /F1 9 Tf 66.00 283.50 Td (# install all Python dependencies) Tj ET
+BT /F1 9 Tf 66.00 271.00 Td (pip install -r requirements.txt) Tj ET
+BT /F1 9 Tf 66.00 258.50 Td () Tj ET
+BT /F1 9 Tf 66.00 246.00 Td (# create the database tables \(SQLite, no setup needed\)) Tj ET
+BT /F1 9 Tf 66.00 233.50 Td (python manage.py makemigrations) Tj ET
+BT /F1 9 Tf 66.00 221.00 Td (python manage.py migrate) Tj ET
+BT /F1 9 Tf 66.00 208.50 Td () Tj ET
+BT /F1 9 Tf 66.00 196.00 Td (# \(optional\) create an admin login for /admin + Admin console) Tj ET
+BT /F1 9 Tf 66.00 183.50 Td (python manage.py createsuperuser) Tj ET
+BT /F1 9 Tf 66.00 171.00 Td () Tj ET
+BT /F1 9 Tf 66.00 158.50 Td (# start the API server) Tj ET
+BT /F1 9 Tf 66.00 146.00 Td (python manage.py runserver) Tj ET
+BT /F1 10 Tf 54.00 133.50 Td (Leave this terminal running. The API is now at http://localhost:8000 .) Tj ET
+BT /F2 13 Tf 54.00 103.50 Td (5. Add your Gemini API key \(for live AI\)) Tj ET
+BT /F1 10 Tf 54.00 83.50 Td (The backend reads AI settings from backend/.env . This file is kept out of git) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 4107 >>
+stream
+BT /F1 10 Tf 54.00 798.00 Td (for security, so create it from the template after cloning:) Tj ET
+BT /F1 9 Tf 66.00 784.00 Td (# inside the backend/ folder) Tj ET
+BT /F1 9 Tf 66.00 771.50 Td (copy .env.example .env # Windows) Tj ET
+BT /F1 9 Tf 66.00 759.00 Td (# cp .env.example .env # macOS / Linux) Tj ET
+BT /F1 10 Tf 54.00 746.50 Td (Then open backend/.env and set your free Google Gemini key:) Tj ET
+BT /F1 9 Tf 66.00 732.50 Td (LLM_PROVIDER=auto) Tj ET
+BT /F1 9 Tf 66.00 720.00 Td (GEMINI_API_KEY=<paste-your-gemini-key-here>) Tj ET
+BT /F1 9 Tf 66.00 707.50 Td (GEMINI_MODEL=gemini-2.0-flash) Tj ET
+BT /F1 10 Tf 54.00 695.00 Td (Get a free key at https://aistudio.google.com/apikey \(a valid key usually starts) Tj ET
+BT /F1 10 Tf 54.00 681.00 Td (with 'AIza'\). Restart the server after editing .env. WITHOUT a key the app still) Tj ET
+BT /F1 10 Tf 54.00 667.00 Td (works using built-in offline answers and summaries.) Tj ET
+BT /F2 13 Tf 54.00 637.00 Td (6. Frontend setup \(React\)) Tj ET
+BT /F1 10 Tf 54.00 617.00 Td (Open a SECOND terminal \(keep the backend running in the first one\):) Tj ET
+BT /F1 9 Tf 66.00 603.00 Td (cd frontend) Tj ET
+BT /F1 9 Tf 66.00 590.50 Td (npm install) Tj ET
+BT /F1 9 Tf 66.00 578.00 Td (npm run dev) Tj ET
+BT /F1 10 Tf 54.00 565.50 Td (This starts the app at http://localhost:5173 and usually opens it automatically.) Tj ET
+BT /F1 10 Tf 54.00 551.50 Td (If the backend is not running, the frontend shows sample 'demo' data so every) Tj ET
+BT /F1 10 Tf 54.00 537.50 Td (screen still works.) Tj ET
+BT /F2 13 Tf 54.00 507.50 Td (7. Use the app) Tj ET
+BT /F1 10 Tf 64.00 487.50 Td (- Open http://localhost:5173 in your browser.) Tj ET
+BT /F1 10 Tf 64.00 473.50 Td (- Create an account \(Full name, Email, Password\), then log in.) Tj ET
+BT /F1 10 Tf 64.00 459.50 Td (- Home: choose a module - Legal Advisor, Document Summary, Generate Document, or) Tj ET
+BT /F1 10 Tf 64.00 445.50 Td (  Clause Verification.) Tj ET
+BT /F1 10 Tf 64.00 431.50 Td (- Legal Advisor: type a legal question and get an answer with citations.) Tj ET
+BT /F1 10 Tf 64.00 417.50 Td (- Document Summary: upload a PDF/DOCX/TXT to get a structured summary + Q&A.) Tj ET
+BT /F1 10 Tf 64.00 403.50 Td (- Generate Document: pick a template or describe a custom draft, choose a) Tj ET
+BT /F1 10 Tf 64.00 389.50 Td (  language, download as PDF.) Tj ET
+BT /F1 10 Tf 64.00 375.50 Td (- Clause Verification: upload a contract to see a risk score, flagged loopholes) Tj ET
+BT /F1 10 Tf 64.00 361.50 Td (  and corrected wording.) Tj ET
+BT /F2 13 Tf 54.00 331.50 Td (8. Troubleshooting) Tj ET
+BT /F1 10 Tf 64.00 311.50 Td (- 'python' is not recognized: reinstall Python with 'Add to PATH' ticked, or use) Tj ET
+BT /F1 10 Tf 64.00 297.50 Td (  'py' instead of 'python'.) Tj ET
+BT /F1 10 Tf 64.00 283.50 Td (- pip fails building PyMuPDF: upgrade pip first -> python -m pip install) Tj ET
+BT /F1 10 Tf 64.00 269.50 Td (  --upgrade pip) Tj ET
+BT /F1 10 Tf 64.00 255.50 Td (- Port already in use: run the API on another port -> python manage.py runserver) Tj ET
+BT /F1 10 Tf 64.00 241.50 Td (  8001 \(then set frontend/.env: VITE_API_BASE_URL=http://localhost:8001/api\).) Tj ET
+BT /F1 10 Tf 64.00 227.50 Td (- Browser network/CORS errors: ensure the backend is running and) Tj ET
+BT /F1 10 Tf 64.00 213.50 Td (  http://localhost:5173 is listed in backend/.env CORS_ALLOWED_ORIGINS.) Tj ET
+BT /F1 10 Tf 64.00 199.50 Td (- Answers look generic / provider 'offline': the Gemini key is missing or invalid) Tj ET
+BT /F1 10 Tf 64.00 185.50 Td (  - make a new one at aistudio.google.com/apikey and update backend/.env.) Tj ET
+BT /F1 10 Tf 64.00 171.50 Td (- 'Demo mode' banner appears: the backend is not reachable - start it with python) Tj ET
+BT /F1 10 Tf 64.00 157.50 Td (  manage.py runserver.) Tj ET
+BT /F2 13 Tf 54.00 127.50 Td (9. Project structure) Tj ET
+BT /F1 9 Tf 66.00 107.50 Td (jurisai/) Tj ET
+BT /F1 9 Tf 66.00 95.00 Td (backend/ Django REST API) Tj ET
+BT /F1 9 Tf 66.00 82.50 Td (legal_ai/ settings & root URLs) Tj ET
+BT /F1 9 Tf 66.00 70.00 Td (common/llm.py AI layer \(Gemini / OpenAI / Anthropic\)) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
+<< /Length 1102 >>
+stream
+BT /F1 9 Tf 66.00 798.00 Td (authentication/ JWT login & registration) Tj ET
+BT /F1 9 Tf 66.00 785.50 Td (chatbot/ Legal Advisor) Tj ET
+BT /F1 9 Tf 66.00 773.00 Td (summarizer/ document summarization + Q&A) Tj ET
+BT /F1 9 Tf 66.00 760.50 Td (document_generation/ templates, drafting, PDF export) Tj ET
+BT /F1 9 Tf 66.00 748.00 Td (clause_verification/ clause loophole / risk analysis) Tj ET
+BT /F1 9 Tf 66.00 735.50 Td (file_manager/ uploads + text extraction) Tj ET
+BT /F1 9 Tf 66.00 723.00 Td (requirements.txt .env.example) Tj ET
+BT /F1 9 Tf 66.00 710.50 Td (frontend/ React \(Vite\) app) Tj ET
+BT /F1 9 Tf 66.00 698.00 Td (src/pages/ src/components/ src/api/) Tj ET
+BT /F2 13 Tf 54.00 669.50 Td (10. Important notes) Tj ET
+BT /F1 10 Tf 64.00 649.50 Td (- Never commit your real API key. backend/.env is already git-ignored.) Tj ET
+BT /F1 10 Tf 64.00 635.50 Td (- Default AI provider is Google Gemini \(free\); OpenAI and Anthropic also work via) Tj ET
+BT /F1 10 Tf 64.00 621.50 Td (  .env.) Tj ET
+BT /F1 10 Tf 64.00 607.50 Td (- JurisAI provides general legal information, not legal advice.) Tj ET
+endstream
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000127 00000 n 
+0000000195 00000 n 
+0000000268 00000 n 
+0000000410 00000 n 
+0000004007 00000 n 
+0000004149 00000 n 
+0000008307 00000 n 
+0000008450 00000 n 
+trailer
+<< /Size 11 /Root 1 0 R >>
+startxref
+9604
+%%EOF
